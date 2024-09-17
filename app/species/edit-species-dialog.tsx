@@ -85,7 +85,12 @@ export default function EditSpeciesDialog({ species }: { species: Species }) {
           <DialogTitle>Edit Species</DialogTitle>
         </DialogHeader>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form
+            onSubmit={function (e) {
+              void form.handleSubmit(onSubmit)(e);
+            }}
+            className="space-y-4"
+          >
             <FormField
               control={form.control}
               name="scientific_name"

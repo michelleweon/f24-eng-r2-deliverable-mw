@@ -104,7 +104,6 @@ export default function EditSpeciesDialog({ species }: { species: Species }) {
                 </FormItem>
               )}
             />
-            {/* Add similar FormField components for common_name, kingdom, total_population, image, and description */}
             <Button type="submit">Update Species</Button>
           </form>
         </Form>
